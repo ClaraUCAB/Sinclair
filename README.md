@@ -20,7 +20,7 @@ This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) i
  bun run src/index.ts
  ```
  
-   ## ** endpoints  (curl) ** 
+   ## endpoints  (curl) 
   
   ejemplo de uso de endpoints
    
