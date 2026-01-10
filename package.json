@@ -26,6 +26,6 @@
 	"scripts": {
 		"start": "bun run src/index.ts",
 		"dev": "bun run --watch src/index.ts",
-		"format": "bun run prettier -w src/"
+		"format": "bun run prettier --config .prettierrc -w src/"
 	}
 }

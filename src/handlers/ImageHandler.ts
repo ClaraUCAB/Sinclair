@@ -101,13 +101,11 @@ export class ImageHandler {
 
 			const angle = Number(req.body.angle);
 			if (!Number.isFinite(angle)) {
-				return res
-					.status(400)
-					.json({
-						success: false,
-						error: "Parámetro inválido: 'angle'",
-						timestamp: new Date().toISOString(),
-					});
+				return res.status(400).json({
+					success: false,
+					error: "Parámetro inválido: 'angle'",
+					timestamp: new Date().toISOString(),
+				});
 			}
 
 			const buffer = await this.service.rotate(req.file.buffer, angle);
@@ -152,24 +150,20 @@ export class ImageHandler {
 				try {
 					operations = JSON.parse(operations);
 				} catch {
-					return res
-						.status(400)
-						.json({
-							success: false,
-							error: "El campo 'operations' debe ser JSON válido",
-							timestamp: new Date().toISOString(),
-						});
+					return res.status(400).json({
+						success: false,
+						error: "El campo 'operations' debe ser JSON válido",
+						timestamp: new Date().toISOString(),
+					});
 				}
 			}
 
 			if (!Array.isArray(operations)) {
-				return res
-					.status(400)
-					.json({
-						success: false,
-						error: "El body debe incluir un array 'operations'",
-						timestamp: new Date().toISOString(),
-					});
+				return res.status(400).json({
+					success: false,
+					error: "El body debe incluir un array 'operations'",
+					timestamp: new Date().toISOString(),
+				});
 			}
 
 			const { buffer, format } = await this.service.pipeline(req.file.buffer, operations);
