@@ -1,6 +1,10 @@
 import express from 'express';
+import * as dotenv from 'dotenv';
+
 import imageRoutes from './routes/image.routes';
 import authRoutes from './routes/auth.routes';
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -8,8 +12,9 @@ app.use(express.json());
 app.use('/images', imageRoutes);
 app.use('/auth', authRoutes);
 
-// TODO: Hacer el puerto una variable de entorno
 
-app.listen(3000, () => {
-	console.log('Servidor corriendo en http://localhost:3000');
+const PORT: number = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+	console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

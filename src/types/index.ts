@@ -11,3 +11,6 @@ export interface User {
 	password: string; // Almacenar hasheado (bcrypt)
 	createdAt: Date;
 }
+
+type ImageApiResponse = ApiResponse<Buffer>;
+type AuthApiResponse = ApiResponse<{ token: string }>;
