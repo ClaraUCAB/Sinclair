@@ -12,7 +12,6 @@ app.use(express.json());
 app.use('/images', imageRoutes);
 app.use('/auth', authRoutes);
 
-
 const PORT: number = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
