@@ -1,15 +1,15 @@
 import bcrypt from 'bcryptjs';
-import { User } from '../models/User.ts';
-
 import * as jwt from 'jsonwebtoken';
-import { Secret, JwtPayload } from 'jsonwebtoken';
+import { Secret } from 'jsonwebtoken';
+import mongoose from 'mongoose';
 
-const JWT_SECRET: Secret = process.env.JWT_SECRET;
+import { UserModel } from '../models/User.ts';
+
+const JWT_SECRET: Secret = process.env.JWT_SECRET as Secret;
 
 interface UserPayload {
 	id: string;
 	email: string;
-	dateCreated: Date;
 }
 
 export enum RegisterStatus {
@@ -26,134 +26,75 @@ export enum LoginStatus {
 	WrongPassword,
 }
 
-// Max allowed input length for bcryptjs is 72.
-// Max hash length generated is 60. We'll use 72.
-/* class CredentialsPO {
-    private email: string;
-    private password: string;
-
-    constructor(email: string, password: string) {
-        if (!email)
-            throw new Error();
-    }
-} */
-
 export class AuthService {
-	// TODO: Temporary memory db while we get the actual db
-	private users: User[] = [];
-	private incrementalId: string = '0';
-
-	/**
-	 * Hashes a plaintext password.
-	 * @param {string} plaintext
-	 * @returns {string} - Hashed password.
-	 */
 	private async hashPassword(password: string): Promise<string> {
-		// Parameters for encryption
-		const ROUNDS: number = 12;
-
+		const ROUNDS = 12;
 		const salt = await bcrypt.genSalt(ROUNDS);
-		const hash = await bcrypt.hash(password, salt);
-
-		return hash;
+		return await bcrypt.hash(password, salt);
 	}
 
-	/**
-	 * Compares a password with a hash.
-	 * @param {string} password
-	 * @param {string} hash
-	 * @returns {boolean} - true if valid, false otherwise.
-	 */
 	private async validatePassword(password: string, hash: string): Promise<boolean> {
 		return await bcrypt.compare(password, hash);
 	}
 
-	// TODO: Will probably remove
-	private storeUser(email: string, password: string) {
-		const user: User = {
-			id: this.incrementalId,
-			email: email,
-			password: password,
-			createdAt: new Date(),
-		};
+	private generateJWT(userId: string, email: string): string {
+		if (!JWT_SECRET) throw new Error('Falta JWT_SECRET en el .env');
 
-		this.incrementalId += Math.floor(Math.random()).toString();
+		const EXPIRES_IN = '2h';
+		const payload: UserPayload = { id: userId, email };
 
-		this.users.push(user);
+		return jwt.sign(payload, JWT_SECRET, { expiresIn: EXPIRES_IN });
 	}
 
-	// TODO: Remove this too
-	private getUserFromEmail(email: string): User | null {
-		for (const user of this.users) {
-			if (user.email === email) return user;
-		}
-
-		return null;
-	}
-
-	private generateJWT(user: User): string {
-		// JWT Parameters
-		const EXPIRES_IN: string = '2h';
-
-		const payload: UserPayload = {
-			id: user.id,
-			email: user.email,
-			dateCreated: user.dateCreated,
-		};
-
-		const token = jwt.sign(payload, JWT_SECRET, {
-			expiresIn: EXPIRES_IN,
-		});
-
-		return token;
-	}
-
-	verifyJWT(token: string): boolean {
+	async verifyJWT(token: string): Promise<boolean> {
 		try {
 			const decoded = jwt.verify(token, JWT_SECRET) as UserPayload;
-			const user = this.getUserFromEmail(decoded.email);
 
-			console.log(`[DEBUG] user: ${user}`);
+			if (!decoded?.id || !decoded?.email) return false;
 
-			if (!user) return false;
-			if (decoded.id !== user.id) return false;
-			if (decoded.dateCreated !== user.dateCreated) return false;
+			// Confirma existencia en DB
+			const exists = await UserModel.exists({
+				_id: new mongoose.Types.ObjectId(decoded.id),
+				email: decoded.email.toLowerCase(),
+			});
 
-			return true;
-		} catch (err: any) {
-			console.log(`[DEBUG] damn miku: ${err.message}.`);
+			return !!exists;
+		} catch {
 			return false;
 		}
 	}
 
 	async register(email: string, password: string): Promise<RegisterStatus> {
-		// TODO: Extract all this behaviour
 		if (!email) return RegisterStatus.EmailEmpty;
-
 		if (!password) return RegisterStatus.PasswordEmpty;
-
 		if (password.length > 72) return RegisterStatus.PasswordTooLong;
 
-		// TODO: Check if email is taken. We need the db for this!
-		if (this.getUserFromEmail(email)) return RegisterStatus.EmailTaken;
+		const normalizedEmail = email.trim().toLowerCase();
+
+		const alreadyExists = await UserModel.exists({ email: normalizedEmail });
+		if (alreadyExists) return RegisterStatus.EmailTaken;
 
 		const hash = await this.hashPassword(password);
-		console.log(`[DEBUG] ${email}:${hash}.`); // TODO: Remove debug
 
-		// TODO: Store in db. We need db!!!
-		this.storeUser(email, hash);
+		await UserModel.create({
+			email: normalizedEmail,
+			password: hash, // guardamos el hash bcrypt en "password"
+			// createdAt se genera solo por timestamps
+		});
 
 		return RegisterStatus.Success;
 	}
 
-	async login(email: string, password: string): [Promise<LoginStatus>, string | null] {
-		const user = this.getUserFromEmail(email);
+	async login(email: string, password: string): Promise<[LoginStatus, string | null]> {
+		const normalizedEmail = email?.trim().toLowerCase();
 
+		const user = await UserModel.findOne({ email: normalizedEmail }).lean();
 		if (!user) return [LoginStatus.InvalidEmail, null];
 
-		if (!(await this.validatePassword(password, user.password))) return [LoginStatus.WrongPassword, null];
+		const ok = await this.validatePassword(password, user.password);
+		if (!ok) return [LoginStatus.WrongPassword, null];
 
-		const token = this.generateJWT(user);
+		const token = this.generateJWT(String(user._id), user.email);
 		return [LoginStatus.Success, token];
 	}
 }
