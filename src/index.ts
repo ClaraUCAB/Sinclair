@@ -21,6 +21,6 @@ async function main() {
 }
 
 main().catch((err) => {
-	console.error('[FATAL] No se pudo iniciar el servidor:', err);
+	console.error('[FATAL] No se pudo iniciar el servidor: ', err);
 	process.exit(1);
 });
