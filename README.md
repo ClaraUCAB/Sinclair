@@ -1,5 +1,5 @@
 # Sinclair
-Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.  
+Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.
 Esta API es para el proyecto final de la materia de Tópicos Especiales de Programación.
 
 ## Requerimientos
@@ -151,7 +151,7 @@ curl -X POST http://localhost:3000/auth/login \
 curl -X POST http://localhost:3000/images/rotate \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp" \
+    -F "image=@images/narga.png" \
     -F "angle=111"\
     --output rotated.webp
 ```
@@ -161,7 +161,7 @@ curl -X POST http://localhost:3000/images/rotate \
 curl -X POST http://localhost:3000/images/resize \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp"\
+    -F "image=@images/narga.png"\
     -F "width=30" \
     -F "height=20" \
     --output resized.png
@@ -172,7 +172,7 @@ curl -X POST http://localhost:3000/images/resize \
 curl -X POST http://localhost:3000/images/crop \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp" \
+    -F "image=@images/narga.png" \
     -F "left=10" -F "top=10" -F "width=50" -F "height=50" \
     --output cropped_final.png
 ```
@@ -182,7 +182,7 @@ curl -X POST http://localhost:3000/images/crop \
 curl -X POST http://localhost:3000/images/filter \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp" \
+    -F "image=@images/narga.png" \
     -F "filter=grayscale" \
     --output filtered.png
 ```
@@ -192,7 +192,7 @@ curl -X POST http://localhost:3000/images/filter \
 curl -X POST http://localhost:3000/images/format \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp" \
+    -F "image=@images/narga.png" \
     -F "format=jpeg" \
     --output converted.jpeg
 ```
@@ -202,7 +202,7 @@ curl -X POST http://localhost:3000/images/format \
 curl -X POST http://localhost:3000/images/pipeline \
     -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
     -H "Content-Type: multipart/form-data" \
-    -F "image=@/home/victor/Descargas/Gagamaru_U20_Uniform_1.webp" \
+    -F "image=@images/narga.png" \
     -F 'operations=[{"type":"resize","params":{"width":800}},{"type":"format","params":{"format":"webp"}}]' \
     --output pipeline_test.webp
 ```
