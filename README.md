@@ -149,7 +149,7 @@ curl -X POST http://localhost:3000/auth/login \
 ### Rotar
 ```bash
 curl -X POST http://localhost:3000/images/rotate \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png" \
     -F "angle=111"\
@@ -159,7 +159,7 @@ curl -X POST http://localhost:3000/images/rotate \
 ###  Redimensionar
 ```bash
 curl -X POST http://localhost:3000/images/resize \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png"\
     -F "width=30" \
@@ -170,7 +170,7 @@ curl -X POST http://localhost:3000/images/resize \
 ### Recortar
 ```bash
 curl -X POST http://localhost:3000/images/crop \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png" \
     -F "left=10" -F "top=10" -F "width=50" -F "height=50" \
@@ -180,7 +180,7 @@ curl -X POST http://localhost:3000/images/crop \
 ### Aplicar filtro
 ```bash
 curl -X POST http://localhost:3000/images/filter \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png" \
     -F "filter=grayscale" \
@@ -190,7 +190,7 @@ curl -X POST http://localhost:3000/images/filter \
 ### Convertir formato
 ```bash
 curl -X POST http://localhost:3000/images/format \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png" \
     -F "format=jpeg" \
@@ -200,7 +200,7 @@ curl -X POST http://localhost:3000/images/format \
 ### Pipeline
 ```bash
 curl -X POST http://localhost:3000/images/pipeline \
-    -H "Authorization: Bearer Tm8gcHVkbyByZXNpc3RpciBsYSB0ZW50YWNpw7NuIGRlIGNvbnZlcnRpciBlbCBiNjQgKDoK" \
+    -H "Authorization: Bearer SnVlZ2EgVGVhbSBGb3J0cmVzcyAyCg==" \
     -H "Content-Type: multipart/form-data" \
     -F "image=@images/narga.png" \
     -F 'operations=[{"type":"resize","params":{"width":800}},{"type":"format","params":{"format":"webp"}}]' \
