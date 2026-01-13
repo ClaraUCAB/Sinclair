@@ -35,3 +35,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 
 *.log
+
+# Killing myself
+rotated.png
+headers
