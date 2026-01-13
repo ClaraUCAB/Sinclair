@@ -7,9 +7,6 @@ import { IImageHandler } from './IImageHandler';
 import { OperationFactory } from '../services/OperationFactory';
 import { IImageOperation } from '../services/operations/IImageOperation';
 
-import { AUTH_SERVICE } from '../types/index';
-import { AuthDecorator } from '../decorators/AuthDecorator';
-
 export interface ImageParams {
 	angle?: number;
 	width?: number;
@@ -26,12 +23,9 @@ export class ImageHandler implements IImageHandler {
 	private operationFactory: OperationFactory;
 	private operation: string = '';
 
-	private authDecorator: AuthDecorator;
-
 	constructor(private service: ImageService) {
 		// FIX: No deberíamos hacer esto.
 		this.operationFactory = new OperationFactory();
-		this.authDecorator = new AuthDecorator(this, AUTH_SERVICE);
 	}
 
 	private async sendImage(res: Response, buffer: Buffer, filename: string) {
@@ -52,8 +46,8 @@ export class ImageHandler implements IImageHandler {
 			const format = req.body.format || 'png';
 			const fit = req.body.fit as keyof import('sharp').FitEnum | undefined;
 			const operations = req.body.operations;
-			this.operation= req.originalUrl.slice(8);
-			
+			this.operation = req.originalUrl.slice(8);
+
 			const params: ImageParams = {
 				angle: angle,
 				width: width,
@@ -101,32 +95,31 @@ export class ImageHandler implements IImageHandler {
 
 	async resize(req: Request, res: Response) {
 		this.operation = 'resize';
-		console.log(hola)
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 
 	async crop(req: Request, res: Response) {
 		this.operation = 'crop';
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 
 	async format(req: Request, res: Response) {
 		this.operation = 'format';
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 
 	async rotate(req: Request, res: Response) {
 		this.operation = 'rotate';
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 
 	async filter(req: Request, res: Response) {
 		this.operation = 'filter';
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 
 	async pipeline(req: Request, res: Response) {
 		this.operation = 'pipeline';
-		this.authDecorator.execute(req, res);
+		this.execute(req, res);
 	}
 }

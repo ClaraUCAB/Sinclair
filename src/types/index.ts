@@ -1,5 +1,3 @@
-import { AuthService } from '../services/AuthService';
-
 export interface ApiResponse<T> {
 	success: boolean;
 	data?: T;
@@ -47,6 +45,3 @@ export interface ImageParams {
 export interface AuthDecoratorParams extends ImageParams {
 	token: string;
 }
-
-// FIX: Evil
-export const AUTH_SERVICE: AuthService = new AuthService();

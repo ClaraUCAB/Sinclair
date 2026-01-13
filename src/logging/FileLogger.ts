@@ -1,15 +1,14 @@
 import { ILogger, LogEntry } from './ILogger.ts';
-import path from 'path'
-import * as fs from 'fs/promises'
+import path from 'path';
+import * as fs from 'fs/promises';
 
 export class FileLogger implements ILogger {
-	private readonly FilePath = path.join(__dirname, "file.log") ;
+	private readonly FilePath = path.join(__dirname, 'file.log');
 	async log(entry: LogEntry): Promise<void> {
 		try {
-			fs.appendFile(this.FilePath, JSON.stringify(entry)+"\n", "utf8")
+			fs.appendFile(this.FilePath, JSON.stringify(entry) + '\n', 'utf8');
 		} catch (error) {
-			throw new error;
+			throw new error();
 		}
 	}
 }
-

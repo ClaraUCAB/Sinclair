@@ -5,9 +5,6 @@ import { FormatOperation } from './operations/FormatOperation';
 import { RotateOperation } from './operations/RotateOperation';
 import { FilterOperation } from './operations/FilterOperation';
 
-import { AuthDecorator } from '../decorators/AuthDecorator.ts';
-import { AuthService } from './AuthService.ts';
-
 export class OperationFactory {
 	private operations: Map<string, IImageOperation> = new Map();
 
