@@ -64,6 +64,18 @@ export class AuthService {
 		}
 	}
 
+	// Código duplicado? Para nada
+	static async getEmailFromJWT(token: string): Promise<string | null> {
+		console.log(`Waos: ${token}`);
+
+		try {
+			const decoded = jwt.verify(token, JWT_SECRET) as UserPayload;
+			return decoded?.email || null;
+		} catch {
+			return null;
+		}
+	}
+
 	async register(email: string, password: string): Promise<RegisterStatus> {
 		if (!email) return RegisterStatus.EmailEmpty;
 		if (!password) return RegisterStatus.PasswordEmpty;
