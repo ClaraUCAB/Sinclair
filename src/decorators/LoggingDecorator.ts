@@ -13,7 +13,7 @@ export class LoggingDecorator implements IImageHandler {
         let start = new Date();
         let inicio = performance.now();
         try {
-            const result = await this.inner.execute(buffer, params);
+            const result = await this.inner.execute(req, res);
             let final = performance.now()
             await this.logger.log({
                 timestamp: start,

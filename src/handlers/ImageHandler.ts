@@ -52,7 +52,8 @@ export class ImageHandler implements IImageHandler {
 			const format = req.body.format || 'png';
 			const fit = req.body.fit as keyof import('sharp').FitEnum | undefined;
 			const operations = req.body.operations;
-
+			this.operation= req.originalUrl.slice(8);
+			
 			const params: ImageParams = {
 				angle: angle,
 				width: width,
@@ -74,7 +75,6 @@ export class ImageHandler implements IImageHandler {
 	async execute(req: Request, res: Response) {
 		const buffer = req.file?.buffer;
 		const params = this.getParams(req);
-
 		if (!buffer) {
 			res.status(400).json({
 				success: false,
