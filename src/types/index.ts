@@ -1,3 +1,7 @@
+export const SUPPORTED_FORMATS: string[] = ['jpeg', 'jpg', 'png', 'webp', 'avif', 'tiff'];
+export const MAX_FILE_SIZE: number = 1e7; // 10 MB
+export const MAX_FILE_SIZE_READABLE: string = '10 MB';
+
 export interface ApiResponse<T> {
 	success: boolean;
 	data?: T;

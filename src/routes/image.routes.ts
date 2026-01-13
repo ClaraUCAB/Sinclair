@@ -6,8 +6,9 @@ import { LoggingDecorator } from '../decorators/LoggingDecorator.ts';
 import { FileLogger } from '../logging/FileLogger.ts';
 import { AuthDecorator } from '../decorators/AuthDecorator.ts';
 import { authService } from './auth.routes.ts';
+import { MAX_FILE_SIZE } from '../types/index';
 
-const upload = multer({ limits: { fileSize: 10 * 1024 * 1024 } });
+const upload = multer({ limits: { fileSize: MAX_FILE_SIZE } });
 const router = Router();
 
 const handler = new ImageHandler(new ImageService());
