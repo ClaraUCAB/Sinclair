@@ -4,6 +4,7 @@ import { CropOperation } from './operations/CropOperation';
 import { FormatOperation } from './operations/FormatOperation';
 import { RotateOperation } from './operations/RotateOperation';
 import { FilterOperation } from './operations/FilterOperation';
+import { PipelineOperation } from './operations/PipelineOperation';
 
 export class OperationFactory {
 	private operations: Map<string, IImageOperation> = new Map();
@@ -14,6 +15,7 @@ export class OperationFactory {
 		this.operations.set('format', new FormatOperation());
 		this.operations.set('rotate', new RotateOperation());
 		this.operations.set('filter', new FilterOperation());
+		this.operations.set('pipeline', new PipelineOperation());
 	}
 
 	getOperation(operation: string): IImageOperation {

@@ -16,6 +16,7 @@ const REQUIRED_PARAMS = Object.freeze({
 	filter: ['filter'],
 	format: ['format'],
 	crop: ['left', 'top', 'width', 'height'],
+	pipeline: ['operations'],
 });
 
 export class ImageHandler implements IImageHandler {
@@ -44,10 +45,28 @@ export class ImageHandler implements IImageHandler {
 		const filter = req.body.filter;
 		const format = req.body.format || 'png';
 		const fit = req.body.fit as keyof import('sharp').FitEnum | undefined;
-		const operations = req.body.operations;
+		const operations = req.body.operations ? JSON.parse(req.body.operations) : [];
 
 		this.operation = req.originalUrl.slice(8);
-		this.requiredParams = REQUIRED_PARAMS[this.operation];
+		this.requiredParams = [];
+
+		if (this.operation === 'pipeline') {
+			// Actually podemos dejar que pipeline no tenga operaciones
+			// Simplemente no hace nada y ya :p
+			// if (operations.length == 0)
+			//     throw new HTTPError(`Pipeline necesita el parámetro 'operations' como JSON.`, 400);
+
+			for (const operation of operations) {
+				const newParams = REQUIRED_PARAMS[operation];
+				if (!newParams) throw new HTTPError(`La operación '${operation}' no existe.`, 400);
+
+				this.requiredParams = [...this.requiredParams, ...newParams];
+			}
+		} else {
+			const operation = REQUIRED_PARAMS[this.operation];
+			if (!operation) throw new HTTPError(`La operación '${operation}' no existe.`, 400);
+			this.requiredParams = operation;
+		}
 
 		if (!SUPPORTED_FORMATS.includes(format)) throw new HTTPError(`Formato '${format}' no soportado.`, 415);
 
