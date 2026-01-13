@@ -1,7 +1,7 @@
 import type { IImageHandler } from '../handlers/IImageHandler.ts';
 import { ILogger, OperationResult, LogLevel } from '../logging/ILogger.ts';
-import { IImageOperation } from '../services/operations/IImageOperation.ts';
-import { Request, Response } from 'express';
+import type { IImageOperation } from '../services/operations/IImageOperation.ts';
+import type { Request, Response } from 'express';
 
 export class LoggingDecorator implements IImageHandler {
 	constructor(

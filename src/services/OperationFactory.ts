@@ -1,4 +1,4 @@
-import { IImageOperation } from './operations/IImageOperation';
+import type { IImageOperation } from './operations/IImageOperation';
 import { ResizeOperation } from './operations/ResizeOperation';
 import { CropOperation } from './operations/CropOperation';
 import { FormatOperation } from './operations/FormatOperation';
@@ -18,7 +18,7 @@ export class OperationFactory {
 
 	getOperation(operation: string): IImageOperation {
 		const op = this.operations.get(operation);
-		if (!op) throw new Error(`Unknown operation: ${type}`);
+		if (!op) throw new Error(`Unknown operation: ${operation}`);
 		return op;
 	}
 }

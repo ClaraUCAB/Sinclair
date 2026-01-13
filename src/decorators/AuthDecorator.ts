@@ -1,7 +1,7 @@
-import { Request, Response } from 'express';
-import { AuthService } from '../services/AuthService';
+import type { Request, Response } from 'express';
+import type { AuthService } from '../services/AuthService';
 import { ApiResponse, StatusCode } from '../types/index';
-import { IImageHandler } from '../handlers/IImageHandler';
+import type { IImageHandler } from '../handlers/IImageHandler';
 
 export class AuthDecorator implements IImageHandler {
 	constructor(
@@ -20,6 +20,7 @@ export class AuthDecorator implements IImageHandler {
 
 		if (!token || !token.startsWith('Bearer')) {
 			res.status(StatusCode.InvalidJWT).json(errorResponse);
+			return;
 		}
 
 		token = token.replace('Bearer ', '');
