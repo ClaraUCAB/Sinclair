@@ -33,7 +33,7 @@ bun run dev
 
 ## Uso
 ### Autenticación
-Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer $SINCLAIR_JWT` en todas las peticiones.
+Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer <token>` en todas las peticiones.
 Para esto primero es necesario autenticarse. Esto se logra con los siguientes endpoints:
 
 | Método | URL                | Description                                     |
@@ -222,10 +222,10 @@ curl -X POST http://localhost:3000/images/pipeline \
     -F 'image=@images/narga.png' \
     -F 'operations=["rotate", "crop", "rotate", "format", "rotate"]' \
     -F 'angle=100' \
-    -F 'left=264' \
-    -F 'top=300' \
-    -F 'width=550' \
-    -F 'height=600' \
+    -F 'left=20' \
+    -F 'top=30' \
+    -F 'width=50' \
+    -F 'height=60' \
     -F 'format=tiff' \
     --output pipeline_result.tiff
 ```
