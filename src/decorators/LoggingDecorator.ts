@@ -14,6 +14,7 @@ export class LoggingDecorator implements IImageHandler {
         let inicio = performance.now();
         try {
             const result = await this.inner.execute(req, res);
+            //let correo = getCorreo(req.);
             let final = performance.now()
             await this.logger.log({
                 timestamp: start,
@@ -21,7 +22,7 @@ export class LoggingDecorator implements IImageHandler {
                 userEmail: "correo", //para esto tengo que decodificar el jwt, lo hago despues
                 endpoint: req.originalUrl,
                 parameters: req.body,
-                executionTime: final-inicio,
+                executionTime: parseFloat((final-inicio).toFixed(2)),
                 result: OperationResult.Success
             });
             return result;
@@ -39,5 +40,9 @@ export class LoggingDecorator implements IImageHandler {
             })
             throw error;
         } 
+    }
+
+    async getCorreo(){
+
     }
 }

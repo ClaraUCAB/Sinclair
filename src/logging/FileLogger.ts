@@ -6,7 +6,7 @@ export class FileLogger implements ILogger {
 	private readonly FilePath = path.join(__dirname, "file.log") ;
 	async log(entry: LogEntry): Promise<void> {
 		try {
-			fs.appendFile(this.FilePath, entry.toString(), "utf8")
+			fs.appendFile(this.FilePath, JSON.stringify(entry)+"\n", "utf8")
 		} catch (error) {
 			throw new error;
 		}

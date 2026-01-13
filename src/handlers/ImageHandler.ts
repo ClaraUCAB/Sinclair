@@ -101,6 +101,7 @@ export class ImageHandler implements IImageHandler {
 
 	async resize(req: Request, res: Response) {
 		this.operation = 'resize';
+		console.log(hola)
 		this.authDecorator.execute(req, res);
 	}
 
