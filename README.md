@@ -1,6 +1,6 @@
 # Sinclair
-Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.  
-Esta API es para el proyecto final de la materia de Tópicos Especiales de Programación.  
+Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.
+Esta API es para el proyecto final de la materia de Tópicos Especiales de Programación.
 
 ## Requerimientos
 * Bun: [Guía de instalación](https://bun.com/docs/installation)
@@ -33,7 +33,7 @@ bun run dev
 
 ## Uso
 ### Autenticación
-Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer <token>` en todas las peticiones.  
+Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer ${SINCLAIR_JWT}` en todas las peticiones.
 Para esto primero es necesario autenticarse. Esto se logra con los siguientes endpoints:
 
 | Método | URL                | Description                                     |
@@ -122,8 +122,8 @@ Para esto primero es necesario autenticarse. Esto se logra con los siguientes en
 <details>
     <summary>Parámetros para los endpoints de <code>/images/pipeline</code></summary>
 
-El endpoint de `pipeline` tiene un único parámetro `operations`, el cual debe ser suministrado como un string en forma de JSON.  
-Este debe contener una lista de operaciones. Las operaciones pueden repetirse para aplicarse varias veces y se ejecutarán en orden.  
+El endpoint de `pipeline` tiene un único parámetro `operations`, el cual debe ser suministrado como un string en forma de JSON.
+Este debe contener una lista de operaciones. Las operaciones pueden repetirse para aplicarse varias veces y se ejecutarán en orden.
 ```ts
 {
     operations: ('rotate' | 'resize' | 'crop' | 'filter' | 'format')[],
@@ -158,12 +158,14 @@ curl -X POST http://localhost:3000/auth/register \
 curl -X POST http://localhost:3000/auth/login \
     -H 'Content-Type: application/json' \
     -d '{"email": "user@email.com", "password": "waos123"}'
+
+# export SINCLAIR_JWT='<token>'
 ```
 
 ### Rotar
 ```bash
 curl -X POST http://localhost:3000/images/rotate \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'angle=111' \
@@ -173,7 +175,7 @@ curl -X POST http://localhost:3000/images/rotate \
 ###  Redimensionar
 ```bash
 curl -X POST http://localhost:3000/images/resize \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'width=30' \
@@ -184,7 +186,7 @@ curl -X POST http://localhost:3000/images/resize \
 ### Recortar
 ```bash
 curl -X POST http://localhost:3000/images/crop \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'left=264' -F 'top=300' -F 'width=550' -F 'height=600' \
@@ -194,7 +196,7 @@ curl -X POST http://localhost:3000/images/crop \
 ### Aplicar filtro
 ```bash
 curl -X POST http://localhost:3000/images/filter \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'filter=grayscale' \
@@ -204,7 +206,7 @@ curl -X POST http://localhost:3000/images/filter \
 ### Convertir formato
 ```bash
 curl -X POST http://localhost:3000/images/format \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'format=jpeg' \
@@ -215,7 +217,7 @@ curl -X POST http://localhost:3000/images/format \
 
 ```bash
 curl -X POST http://localhost:3000/images/pipeline \
-    -H 'Authorization: Bearer <token>' \
+    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'operations=["rotate", "crop", "rotate", "format", "rotate"]' \
