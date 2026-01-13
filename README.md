@@ -165,7 +165,7 @@ curl -X POST http://localhost:3000/auth/login \
 ### Rotar
 ```bash
 curl -X POST http://localhost:3000/images/rotate \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'angle=111' \
@@ -175,7 +175,7 @@ curl -X POST http://localhost:3000/images/rotate \
 ###  Redimensionar
 ```bash
 curl -X POST http://localhost:3000/images/resize \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'width=30' \
@@ -186,7 +186,7 @@ curl -X POST http://localhost:3000/images/resize \
 ### Recortar
 ```bash
 curl -X POST http://localhost:3000/images/crop \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'left=264' -F 'top=300' -F 'width=550' -F 'height=600' \
@@ -196,7 +196,7 @@ curl -X POST http://localhost:3000/images/crop \
 ### Aplicar filtro
 ```bash
 curl -X POST http://localhost:3000/images/filter \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'filter=grayscale' \
@@ -206,7 +206,7 @@ curl -X POST http://localhost:3000/images/filter \
 ### Convertir formato
 ```bash
 curl -X POST http://localhost:3000/images/format \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/niko.png' \
     -F 'format=jpeg' \
@@ -217,7 +217,7 @@ curl -X POST http://localhost:3000/images/format \
 
 ```bash
 curl -X POST http://localhost:3000/images/pipeline \
-    -H 'Authorization: Bearer ${SINCLAIR_JWT}' \
+    -H "Authorization: Bearer ${SINCLAIR_JWT}" \
     -H 'Content-Type: multipart/form-data' \
     -F 'image=@images/narga.png' \
     -F 'operations=["rotate", "crop", "rotate", "format", "rotate"]' \
