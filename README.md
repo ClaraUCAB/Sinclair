@@ -1,19 +1,19 @@
 ```
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢄⠈⢿⡆⠀⠀⠀⠀⠀⠀⢰⡿⠁⡠⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢄⠈⢿⡆⠀⠀⠀⠀⠀⠀⢰⡿⠁⡠⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⢄⠈⢿⡆⠀⠀⠀⠀⠀⠀⢰⡿⠁⡠⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠈⢿⠀⠀⠀⠀⠀⠀⡿⠁⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠈⢿⠀⠀⠀⠀⠀⠀⡿⠁⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠈⢿⠀⠀⠀⠀⠀⠀⡿⠁⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⢸⣇⠀⠀⠀⠀⣸⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⢸⣇⠀⠀⠀⠀⣸⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⢸⣇⠀⠀⠀⠀⣸⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣀⣿⣴⣶⣶⣦⣿⣀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣀⣿⣴⣶⣶⣦⣿⣀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣀⣿⣴⣶⣶⣦⣿⣀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀
-⠀⠀⣠⣴⣾⠟⠋⠉⠀⠀⣿⣿⠿⢿⣿⣿⡿⠿⣿⣿⠀⠀⠉⠙⠻⣷⣦⣄⠀⠀  ⠀⠀⣠⣴⣾⠟⠋⠉⠀⠀⣿⣿⠿⢿⣿⣿⡿⠿⣿⣿⠀⠀⠉⠙⠻⣷⣦⣄⠀⠀  ⠀⠀⣠⣴⣾⠟⠋⠉⠀⠀⣿⣿⠿⢿⣿⣿⡿⠿⣿⣿⠀⠀⠉⠙⠻⣷⣦⣄⠀⠀
-⠀⠘⢿⣿⣿⣦⣀⡀⠀⠀⠻⠁⠀⠈⠿⠿⠁⠀⠈⠟⠀⠀⢀⣀⣴⣿⣿⡿⠃⠀  ⠀⠘⢿⣿⣿⣦⣀⡀⠀⠀⠻⠁⠀⠈⠿⠿⠁⠀⠈⠟⠀⠀⢀⣀⣴⣿⣿⡿⠃⠀  ⠀⠘⢿⣿⣿⣦⣀⡀⠀⠀⠻⠁⠀⠈⠿⠿⠁⠀⠈⠟⠀⠀⢀⣀⣴⣿⣿⡿⠃⠀
-⠀⠀⠀⠉⠙⠻⠿⠿⣿⣷⣶⣶⣶⣦⣤⣤⣴⣶⣶⣶⣾⣿⠿⠿⠟⠋⠉⠀⠀⠀  ⠀⠀⠀⠉⠙⠻⠿⠿⣿⣷⣶⣶⣶⣦⣤⣤⣴⣶⣶⣶⣾⣿⠿⠿⠟⠋⠉⠀⠀⠀  ⠀⠀⠀⠉⠙⠻⠿⠿⣿⣷⣶⣶⣶⣦⣤⣤⣴⣶⣶⣶⣾⣿⠿⠿⠟⠋⠉⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣬⣭⣭⣭⣭⣭⣭⣥⣤⣤⣤⡄⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣬⣭⣭⣭⣭⣭⣭⣥⣤⣤⣤⡄⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣬⣭⣭⣭⣭⣭⣭⣥⣤⣤⣤⡄⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢈⣉⠙⠛⠛⠛⠿⠿⠿⠿⠛⠛⠛⠋⢉⡁⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢈⣉⠙⠛⠛⠛⠿⠿⠿⠿⠛⠛⠛⠋⢉⡁⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢈⣉⠙⠛⠛⠛⠿⠿⠿⠿⠛⠛⠛⠋⢉⡁⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢄⠈⢿⡆⠀⠀⠀⠀⠀⠀⢰⡿⠁⡠⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⢄⠈⢿⡆⠀⠀⠀⠀⠀⠀⢰⡿⠁⡠⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠈⢿⠀⠀⠀⠀⠀⠀⡿⠁⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠈⢿⠀⠀⠀⠀⠀⠀⡿⠁⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⢸⣇⠀⠀⠀⠀⣸⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⢸⣇⠀⠀⠀⠀⣸⡇⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣀⣿⣴⣶⣶⣦⣿⣀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣀⣿⣴⣶⣶⣦⣿⣀⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⣀⣀⣀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣴⣾⠟⠋⠉⠀⠀⣿⣿⠿⢿⣿⣿⡿⠿⣿⣿⠀⠀⠉⠙⠻⣷⣦⣄⠀⠀     ⠀⠀⣠⣴⣾⠟⠋⠉⠀⠀⣿⣿⠿⢿⣿⣿⡿⠿⣿⣿⠀⠀⠉⠙⠻⣷⣦⣄⠀⠀
+⠀⠘⢿⣿⣿⣦⣀⡀⠀⠀⠻⠁⠀⠈⠿⠿⠁⠀⠈⠟⠀⠀⢀⣀⣴⣿⣿⡿⠃⠀     ⠀⠘⢿⣿⣿⣦⣀⡀⠀⠀⠻⠁⠀⠈⠿⠿⠁⠀⠈⠟⠀⠀⢀⣀⣴⣿⣿⡿⠃⠀
+⠀⠀⠀⠉⠙⠻⠿⠿⣿⣷⣶⣶⣶⣦⣤⣤⣴⣶⣶⣶⣾⣿⠿⠿⠟⠋⠉⠀⠀⠀     ⠀⠀⠀⠉⠙⠻⠿⠿⣿⣷⣶⣶⣶⣦⣤⣤⣴⣶⣶⣶⣾⣿⠿⠿⠟⠋⠉⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣬⣭⣭⣭⣭⣭⣭⣥⣤⣤⣤⡄⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣬⣭⣭⣭⣭⣭⣭⣥⣤⣤⣤⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢈⣉⠙⠛⠛⠛⠿⠿⠿⠿⠛⠛⠛⠋⢉⡁⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⢈⣉⠙⠛⠛⠛⠿⠿⠿⠿⠛⠛⠛⠋⢉⡁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀     ⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠛⠛⠛⠛⠛⠛⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀
 ```
 
 # Sinclair
@@ -23,7 +23,7 @@
 ![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Mongoose](https://img.shields.io/badge/Mongoose-%23880000?style=for-the-badge&logo=mongoose&logoColor=white)
 
-Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.
+Rest API de manipulación de imágenes (Image Manipulation as a Service) con autenticación de usuarios a través de JWTs.  
 Esta API es para el proyecto final de la materia de Tópicos Especiales de Programación.
 
 ## Requerimientos
@@ -65,7 +65,7 @@ bun run dev
 
 ## Uso
 ### Autenticación
-Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer <token>` en todas las peticiones.
+Al realizar operaciones es necesario una JWT agregada como header `Authorization: Bearer <token>` en todas las peticiones.  
 Para esto primero es necesario autenticarse. Esto se logra con los siguientes endpoints:
 
 | Método | URL                | Descripción                                     |
@@ -154,7 +154,7 @@ Para esto primero es necesario autenticarse. Esto se logra con los siguientes en
 <details>
     <summary>Parámetros para los endpoints de <code>/images/pipeline</code></summary>
 
-El endpoint de `pipeline` tiene un único parámetro `operations`, el cual debe ser suministrado como un string en forma de JSON.
+El endpoint de `pipeline` tiene un único parámetro `operations`, el cual debe ser suministrado como un string en forma de JSON.  
 Este debe contener una lista de operaciones. Las operaciones pueden repetirse para aplicarse varias veces y se ejecutarán en orden.
 ```ts
 {
